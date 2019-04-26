@@ -24,3 +24,7 @@
 //     dfs(root,0);
 //     return maxn
 // };
+
+function maxh(treeNode){
+    return treeNode == null ? 0 : Math.max(maxh(treeNode.left), maxh(treeNode.right))+1 
+}

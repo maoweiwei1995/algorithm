@@ -36,14 +36,13 @@ var deleteDuplicates = function(head) {
  * 常规操作 一个一个比较 返回头结点
  */
 var deleteDuplicates = function(head) {
+    if (!head) {
+        return null
+    }
     var ans = head
     while (head && head.next) {
         if (head.val == head.next.val) {
-            if (head.next.next) {
-                head.next = head.next.next
-            } else {
-                head.next = null
-            }
+            head.next = head.next.next
         } else {
             head = head.next
         }

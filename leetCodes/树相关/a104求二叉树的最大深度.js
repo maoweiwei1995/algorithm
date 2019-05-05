@@ -1,4 +1,32 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function(root) {
+    if (!root) {
+        return 0
+    }
+     return dfs(root,0)
+   
+};
 
+function dfs(node,depth) {
+    //1.终止条件
+    if (!node) {
+        return depth
+    }
+    //2.操作
+    return Math.max(dfs(node.left,depth+1),dfs(node.right,depth+1))
+
+    //3.返回值
+}
 /**a104 
  * Definition for a binary tree node.
  * function TreeNode(val) {

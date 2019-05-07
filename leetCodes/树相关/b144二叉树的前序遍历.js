@@ -8,7 +8,7 @@
 /**
  * @param {TreeNode} root
  * @return {number[]}
- * 迭代
+ * 迭代 用栈来实现
  */
 var preorderTraversal = function(root) {
     if(root == null) {

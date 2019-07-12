@@ -13,42 +13,6 @@
  */
 var reverseBetween = function(head, m, n) {
     // 长度为1的特例
-    if (head === null || m === n) {
-        return head
-    }
-    
-    let i = 0
-    let pre = null
-    let cur
-    let tmp
-    let cutpoint
-    let firstReversePoint
-    let nullhead = new ListNode(0)
-    nullhead.next = head
-    cur = nullhead
-    
-    while( i < m){
-        i++
-        cutpoint = cur
-        cur = cur.next
-    }
-    firstReversePoint = cur
-   
-    while( i <= n) {
-        tmp = cur.next
-        cur.next = pre
-        pre = cur
-        cur = tmp
-        i++
-    }
-    firstReversePoint.next = cur
-    cutpoint.next = pre
-    return nullhead.next
-};
-
-
-var reverseBetween = function(head, m, n) {
-    // 长度为1的特例
     if (head === null && m === n) {
         return head
     }

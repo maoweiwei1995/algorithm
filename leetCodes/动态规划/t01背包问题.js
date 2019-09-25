@@ -31,3 +31,7 @@ var findMax = function (v, w, capacity){
     }
     return V[len-1][capacity-1]
 }
+
+let v = [6, 3, 5, 4, 6]
+let w = [2, 2, 6, 5, 4]
+console.log(findMax(v, w, 10))

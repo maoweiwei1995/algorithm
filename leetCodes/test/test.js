@@ -1,2 +1,5 @@
-let num = 10
-console.log(typeof num.toString(2))
+let num = [{a: 2}, {c: 4}]
+num.sort((a, b) => {
+    console.log(a, b)
+    return a - b
+})
